@@ -1,14 +1,14 @@
 import React from "react";
+import ProductCard from "../../Components/products/ProductCard";
 import "./Products.css";
-// import Navbar from "./Navbar"
 
-import gallery_1 from "../assets/gallery-1.jpg";
-import gallery_2 from "../assets/gallery-2.jpg";
-import gallery_3 from "../assets/gallery-3.jpg";
-import gallery_4 from "../assets/gallery-4.jpg";
-import gallery_5 from "../assets/gallery-5.jpg";
-import gallery_6 from "../assets/gallery-6.jpg";
-import gallery_7 from "../assets/gallery-7.jpeg";
+import gallery_1 from "../../assets/gallery-1.jpg";
+import gallery_2 from "../../assets/gallery-2.jpg";
+import gallery_3 from "../../assets/gallery-3.jpg";
+import gallery_4 from "../../assets/gallery-4.jpg";
+import gallery_5 from "../../assets/gallery-5.jpg";
+import gallery_6 from "../../assets/gallery-6.jpg";
+import gallery_7 from "../../assets/gallery-7.jpeg";
 
 const productData = [
     {
@@ -64,16 +64,7 @@ const Products = () => {
             </header>
             <section className="products-grid">
                 {productData.map((product, index) => (
-                    <div key={product.id} className={`product-card animation-delay-${index}`}>
-                        <div className="product-image-container">
-                            <img src={product.image} alt={product.name} className="product-image" />
-                        </div>
-                        <div className="product-details">
-                            <h3>{product.name}</h3>
-                            <p>{product.description}</p>
-                            <button className="read-more-btn">Read More</button>
-                        </div>
-                    </div>
+                    <ProductCard key={index} index={index} product={product} />
                 ))}
             </section>
         </main>
