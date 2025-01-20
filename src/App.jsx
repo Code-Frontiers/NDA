@@ -13,10 +13,10 @@ import AboutUs from "./pages/AboutUs"
 import SuccessStory from "./pages/SuccessStory"
 import ContactUs from "./pages/ContactUs"
 import Gallery from "./pages/Gallery"
-import OurSubsidiary from "./pages/OurSubsidiary"
+import OurSubsidiary from "./pages/Oursubsidiary"
 import Products from "./pages/Products"
 import Title from "./Components/Title/Title"
-import ServiceSection from "./Components/Service/ServiceSection" // Fixed import
+import ServiceSection from "./Components/Service/ServiceSection"
 
 const App = () => {
   const [playState, setPlayState] = useState(false)
