@@ -1,0 +1,134 @@
+/* Navbar Styling */
+nav {
+  width: 100%;
+  color: #fff;
+  padding: 4px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+body {
+  padding-top: 80px; /* Ensure content is not hidden behind navbar */
+}
+
+.transparent-nav {
+  background: transparent;
+  box-shadow: none;
+  color: white;
+}
+
+.dark-nav {
+  background: #212ea0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 180px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+}
+
+.hide-mobile-menu {
+  right: -200px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 15;
+  min-width: 300px;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background: #212ea0;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 840px) {
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #212ea0;
+    width: 200px;
+    flex-direction: column;
+    padding-top: 70px;
+    transition: right 0.5s ease;
+  }
+
+  nav ul li {
+    margin: 25px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .hide-mobile-menu {
+    right: -200px;
+  }
+}
