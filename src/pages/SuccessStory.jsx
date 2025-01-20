@@ -1,5 +1,4 @@
 import React from "react"
-import "./SuccessStory.css"
 
 const SuccessStory = () => {
   const stories = [

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./Navbar.css";
-import logo from "../../assets/logo.png";
-import menu_icon from "../../assets/menu-icon.png";
+import logo from "../assets/logo.png";
+import menu_icon from "../assets/menu-icon.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -29,11 +28,9 @@ const Navbar = () => {
 
     return (
         <nav className={`container ${sticky ? "dark-nav" : "transparent-nav"}`}>
-            {/* <div> */}
             <Link to="/">
                 <img src={logo} alt="Logo" className="logo" />
             </Link>
-            {/* </div> */}
             <ul className={`${mobileMenu ? "" : "hide-mobile-menu"}`}>
                 <li>
                     <Link to="/">Home</Link>
@@ -74,7 +71,7 @@ const Navbar = () => {
                     </ul>
                 </li>
                 <li>
-                    <Link to="/our-subsidiary">Our Subsidiary</Link>
+                    <Link to="/subsidiary">Our Subsidiary</Link>
                 </li>
                 <li>
                     <Link to="/success-stories">Success Stories</Link>

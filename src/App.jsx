@@ -1,14 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar/Navbar";
-import Home from "./pages/Home";
-import Footer from "./Components/Footer/Footer";
-import AboutUs from "./pages/AboutUs";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import Home from "./pages/home/Home";
+import About from "./pages/About";
 import SuccessStory from "./pages/SuccessStory";
 import ContactUs from "./pages/ContactUs";
 import Gallery from "./pages/Gallery";
-import OurSubsidiary from "./pages/Oursubsidiary";
+import Subsidiary from "./pages/Subsidiary";
 import Products from "./pages/products/Products";
+import "./styles/index.css";
 
 const App = () => {
     return (
@@ -16,11 +17,11 @@ const App = () => {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<AboutUs />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/success-stories" element={<SuccessStory />} />
                 <Route path="/gallery" element={<Gallery />} />
-                <Route path="/our-subsidiary" element={<OurSubsidiary />} />
+                <Route path="/subsidiary" element={<Subsidiary />} />
                 <Route path="/contact-us" element={<ContactUs />} />
             </Routes>
             <Footer />

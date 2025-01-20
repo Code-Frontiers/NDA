@@ -1,11 +1,3 @@
-/* General Styling */
-body {
-    font-family: "Arial", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .about-us {
     color: #333;
     line-height: 1.6;
