@@ -18,7 +18,7 @@ const Home = () => {
                 <Title subTitle="Our PRODUCTS" title="What We Offer" />
                 <Campus />
                 <About setPlayState={setPlayState} />
-                <ServiceSection /> {/* Fixed usage */}
+                <ServiceSection />
                 <Title subTitle="" title="Our Distributership" />
                 <Testimonials />
                 <Title subTitle="Contact Us" title="Get in Touch" />

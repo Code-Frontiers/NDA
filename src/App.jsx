@@ -8,7 +8,7 @@ import SuccessStory from "./pages/SuccessStory";
 import ContactUs from "./pages/ContactUs";
 import Gallery from "./pages/Gallery";
 import OurSubsidiary from "./pages/Oursubsidiary";
-import Products from "./pages/Products";
+import Products from "./pages/products/Products";
 
 const App = () => {
     return (
