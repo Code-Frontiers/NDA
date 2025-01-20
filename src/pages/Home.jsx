@@ -14,6 +14,7 @@ const Home = () => {
     return (
         <>
             <Hero />
+            <VideoPlayer playState={playState} setPlayState={setPlayState} />
             <div className="container">
                 <Title subTitle="Our PRODUCTS" title="What We Offer" />
                 <Campus />
@@ -24,7 +25,6 @@ const Home = () => {
                 <Title subTitle="Contact Us" title="Get in Touch" />
                 <Contact />
             </div>
-            <VideoPlayer playState={playState} setPlayState={setPlayState} />
         </>
     );
 };
