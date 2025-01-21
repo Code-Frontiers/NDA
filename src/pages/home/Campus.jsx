@@ -1,12 +1,10 @@
 import React from 'react';
-import './Campus.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
-
 import {
   EffectCoverflow,
   Pagination,
@@ -32,7 +30,7 @@ const Campus = () => {
       {/* <header className="gallery-header">
         <h2 className="gallery-title">Explore Our Products</h2>
       </header> */}
-      
+
       <div className="gallery">
         <Swiper
           effect="coverflow"
@@ -63,7 +61,7 @@ const Campus = () => {
           ))}
         </Swiper>
       </div>
-      
+
       <button className='btn dark-btn'>
         See more <img src={white_arrow} alt="Arrow" />
       </button>
