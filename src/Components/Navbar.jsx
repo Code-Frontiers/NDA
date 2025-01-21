@@ -7,7 +7,7 @@ const Navbar = ({ isHome }) => {
     const [sticky, setSticky] = useState(false);
     const [mobileMenu, setMobileMenu] = useState(false);
     const [overlayActive, setOverlayActive] = useState(false);
-    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [activeDropdowns, setActiveDropdowns] = useState([]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -27,15 +27,17 @@ const Navbar = ({ isHome }) => {
     const closeMenu = () => {
         setMobileMenu(false);
         setOverlayActive(false);
+        setActiveDropdowns([]);
     };
 
-    const navClass = isHome
-        ? sticky
-            ? "dark-nav"
-            : "transparent-nav"
-        : "dark-nav";
+    const toggleDropdown = (path) => {
+        setActiveDropdowns((prev) =>
+            prev.includes(path) ? prev.filter((p) => p !== path) : [...prev, path]
+        );
+    };
 
-    // Navigation links array
+    const navClass = isHome ? (sticky ? "dark-nav" : "transparent-nav") : "dark-nav";
+
     const navLinks = [
         { name: "Home", path: "/" },
         { name: "About us", path: "/about" },
@@ -44,19 +46,53 @@ const Navbar = ({ isHome }) => {
             path: "/products",
             isDropdown: true,
             dropdownItems: [
-                { name: "Single Part Dispensing", path: "/products/single-part-dispensing" },
+                {
+                    name: "Single Part Dispensing",
+                    path: "/products/single-part-dispensing",
+                    dropdownItems: [
+                        {
+                            name: "Mixer Services",
+                            path: "/products/single-part-dispensing/mixer",
+                        },
+                        {
+                            name: "Toaster Services",
+                            path: "/products/single-part-dispensing/toaster",
+                        },
+                    ],
+                },
                 { name: "Two Part Dispensing", path: "/products/two-part-dispensing" },
                 { name: "Dispensing Robots", path: "/products/dispensing-robots" },
                 { name: "Piston Pumps", path: "/products/piston-pumps" },
                 { name: "Industrial Automations", path: "/products/industrial-automations" },
                 { name: "Pressurized Fluid Tanks", path: "/products/pressurized-fluid-tanks" },
-                { name: "Pidilite Industrial Bonding Solutions", path: "/products/pidilite-industrial-bonding" },
+                {
+                    name: "Pidilite Industrial Bonding Solutions",
+                    path: "/products/pidilite-industrial-bonding",
+                },
             ],
         },
         { name: "Our Subsidiary", path: "/subsidiary" },
         { name: "Success Stories", path: "/success-stories" },
         { name: "Contact us", path: "/contact-us", isButton: true },
     ];
+
+    const renderDropdown = (items, parentPath) => {
+        return (
+            <ul className={`dropdown-menu ${activeDropdowns.includes(parentPath) ? "show" : ""}`}>
+                {items.map((item, index) => (
+                    <li
+                        key={index}
+                        className={item.dropdownItems ? "dropdown" : ""}
+                        onMouseEnter={() => item.dropdownItems && toggleDropdown(item.path)}
+                        onMouseLeave={() => item.dropdownItems && toggleDropdown(item.path)}
+                    >
+                        <Link to={item.path}>{item.name}</Link>
+                        {item.dropdownItems && renderDropdown(item.dropdownItems, item.path)}
+                    </li>
+                ))}
+            </ul>
+        );
+    };
 
     return (
         <>
@@ -69,22 +105,14 @@ const Navbar = ({ isHome }) => {
                     {navLinks.map((link, index) => (
                         <li
                             key={index}
-                            className={link.isDropdown ? "dropdown" : ""}
-                            onMouseEnter={() => link.isDropdown && setDropdownOpen(true)}
-                            onMouseLeave={() => link.isDropdown && setDropdownOpen(false)}
+                            className={link.isDropdown ? "nav-links dropdown" : "nav-links"}
+                            onMouseEnter={() => link.isDropdown && toggleDropdown(link.path)}
+                            onMouseLeave={() => link.isDropdown && toggleDropdown(link.path)}
                         >
                             <Link to={link.path} className={link.isButton ? "btn" : ""}>
                                 {link.name}
                             </Link>
-                            {link.isDropdown && (
-                                <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
-                                    {link.dropdownItems.map((item, subIndex) => (
-                                        <li key={subIndex}>
-                                            <Link to={item.path}>{item.name}</Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
+                            {link.isDropdown && renderDropdown(link.dropdownItems, link.path)}
                         </li>
                     ))}
                 </ul>

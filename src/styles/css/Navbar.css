@@ -1,4 +1,3 @@
-/* Navbar Styling */
 nav {
     width: 100%;
     color: #fff;
@@ -32,17 +31,18 @@ nav ul {
     align-items: center;
 }
 
-nav ul li {
+.nav-links {
     margin: 0 20px;
 }
 
-nav ul li a {
+.nav-links a {
     color: white;
     padding: 10px 15px;
     transition: color 0.3s ease;
+    font-size: 17px;
 }
 
-nav ul li a:hover {
+.nav-links a:hover {
     color: #ffd700;
 }
 
@@ -75,7 +75,7 @@ nav ul li a:hover {
     transform: translateY(10px);
     transition: all 0.3s ease;
     z-index: 15;
-    min-width: 300px;
+    min-width: 250px;
 }
 
 .dropdown-menu.show {
@@ -100,6 +100,25 @@ nav ul li a:hover {
     color: white;
 }
 
+.dropdown-menu .dropdown {
+    position: relative;
+}
+
+.dropdown-menu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dropdown-menu .dropdown-menu.show {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -107,11 +126,11 @@ nav ul li a:hover {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 9; /* Ensure it's below the menu but above everything else */
+    z-index: 9;
     transition: opacity 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     nav ul {
         position: fixed;
         top: 0;
@@ -124,7 +143,7 @@ nav ul li a:hover {
         transition: right 0.5s ease;
     }
 
-    nav ul li {
+    .nav-links {
         margin: 25px 0;
     }
 
