@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const Navbar = ({ isHome }) => {
     const [sticky, setSticky] = useState(false);
     const [mobileMenu, setMobileMenu] = useState(false);
+    const [overlayActive, setOverlayActive] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     useEffect(() => {
@@ -20,6 +21,12 @@ const Navbar = ({ isHome }) => {
 
     const toggleMenu = () => {
         setMobileMenu(!mobileMenu);
+        setOverlayActive(!overlayActive);
+    };
+
+    const closeMenu = () => {
+        setMobileMenu(false);
+        setOverlayActive(false);
     };
 
     const navClass = isHome
@@ -52,35 +59,38 @@ const Navbar = ({ isHome }) => {
     ];
 
     return (
-        <nav className={`container ${navClass}`}>
-            <Link to="/">
-                <img src={logo} alt="Logo" className="logo" />
-            </Link>
-            <ul className={`${mobileMenu ? "" : "hide-mobile-menu"}`}>
-                {navLinks.map((link, index) => (
-                    <li
-                        key={index}
-                        className={link.isDropdown ? "dropdown" : ""}
-                        onMouseEnter={() => link.isDropdown && setDropdownOpen(true)}
-                        onMouseLeave={() => link.isDropdown && setDropdownOpen(false)}
-                    >
-                        <Link to={link.path} className={link.isButton ? "btn" : ""}>
-                            {link.name}
-                        </Link>
-                        {link.isDropdown && (
-                            <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
-                                {link.dropdownItems.map((item, subIndex) => (
-                                    <li key={subIndex}>
-                                        <Link to={item.path}>{item.name}</Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                    </li>
-                ))}
-            </ul>
-            <img src={menu_icon} alt="Menu" className="menu-icon" onClick={toggleMenu} />
-        </nav>
+        <>
+            {overlayActive && <div className="overlay" onClick={closeMenu}></div>}
+            <nav className={`container ${navClass}`}>
+                <Link to="/">
+                    <img src={logo} alt="Logo" className="logo" />
+                </Link>
+                <ul className={`${mobileMenu ? "" : "hide-mobile-menu"}`}>
+                    {navLinks.map((link, index) => (
+                        <li
+                            key={index}
+                            className={link.isDropdown ? "dropdown" : ""}
+                            onMouseEnter={() => link.isDropdown && setDropdownOpen(true)}
+                            onMouseLeave={() => link.isDropdown && setDropdownOpen(false)}
+                        >
+                            <Link to={link.path} className={link.isButton ? "btn" : ""}>
+                                {link.name}
+                            </Link>
+                            {link.isDropdown && (
+                                <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
+                                    {link.dropdownItems.map((item, subIndex) => (
+                                        <li key={subIndex}>
+                                            <Link to={item.path}>{item.name}</Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </li>
+                    ))}
+                </ul>
+                <img src={menu_icon} alt="Menu" className="hamburger-icon" onClick={toggleMenu} />
+            </nav>
+        </>
     );
 };
 
