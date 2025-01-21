@@ -22,15 +22,34 @@ const Navbar = ({ isHome }) => {
         setMobileMenu(!mobileMenu);
     };
 
-    const toggleDropdown = () => {
-        setDropdownOpen(!dropdownOpen);
-    };
-
     const navClass = isHome
         ? sticky
             ? "dark-nav"
             : "transparent-nav"
         : "dark-nav";
+
+    // Navigation links array
+    const navLinks = [
+        { name: "Home", path: "/" },
+        { name: "About us", path: "/about" },
+        {
+            name: "Products",
+            path: "/products",
+            isDropdown: true,
+            dropdownItems: [
+                { name: "Single Part Dispensing", path: "/products/single-part-dispensing" },
+                { name: "Two Part Dispensing", path: "/products/two-part-dispensing" },
+                { name: "Dispensing Robots", path: "/products/dispensing-robots" },
+                { name: "Piston Pumps", path: "/products/piston-pumps" },
+                { name: "Industrial Automations", path: "/products/industrial-automations" },
+                { name: "Pressurized Fluid Tanks", path: "/products/pressurized-fluid-tanks" },
+                { name: "Pidilite Industrial Bonding Solutions", path: "/products/pidilite-industrial-bonding" },
+            ],
+        },
+        { name: "Our Subsidiary", path: "/subsidiary" },
+        { name: "Success Stories", path: "/success-stories" },
+        { name: "Contact us", path: "/contact-us", isButton: true },
+    ];
 
     return (
         <nav className={`container ${navClass}`}>
@@ -38,55 +57,27 @@ const Navbar = ({ isHome }) => {
                 <img src={logo} alt="Logo" className="logo" />
             </Link>
             <ul className={`${mobileMenu ? "" : "hide-mobile-menu"}`}>
-                <li>
-                    <Link to="/">Home</Link>
-                </li>
-                <li>
-                    <Link to="/about">About us</Link>
-                </li>
-                <li
-                    className="dropdown"
-                    onMouseEnter={() => setDropdownOpen(true)}
-                    onMouseLeave={() => setDropdownOpen(false)}
-                >
-                    <Link to="/products">Products</Link>
-                    <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
-                        <li>
-                            <Link to="/single-part-dispensing">Single Part Dispensing</Link>
-                        </li>
-                        <li>
-                            <Link to="/two-part-dispensing">Two Part Dispensing</Link>
-                        </li>
-                        <li>
-                            <Link to="/dispensing-robots">Dispensing Robots</Link>
-                        </li>
-                        <li>
-                            <Link to="/piston-pumps">Piston Pumps</Link>
-                        </li>
-                        <li>
-                            <Link to="/industrial-automations">Industrial Automations</Link>
-                        </li>
-                        <li>
-                            <Link to="/pressurized-fluid-tanks">Pressurized Fluid Tanks</Link>
-                        </li>
-                        <li>
-                            <Link to="/pidilite-industrial-bonding">
-                                Pidilite Industrial Bonding Solutions
-                            </Link>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <Link to="/subsidiary">Our Subsidiary</Link>
-                </li>
-                <li>
-                    <Link to="/success-stories">Success Stories</Link>
-                </li>
-                <li>
-                    <Link to="/contact-us" className="btn">
-                        Contact us
-                    </Link>
-                </li>
+                {navLinks.map((link, index) => (
+                    <li
+                        key={index}
+                        className={link.isDropdown ? "dropdown" : ""}
+                        onMouseEnter={() => link.isDropdown && setDropdownOpen(true)}
+                        onMouseLeave={() => link.isDropdown && setDropdownOpen(false)}
+                    >
+                        <Link to={link.path} className={link.isButton ? "btn" : ""}>
+                            {link.name}
+                        </Link>
+                        {link.isDropdown && (
+                            <ul className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
+                                {link.dropdownItems.map((item, subIndex) => (
+                                    <li key={subIndex}>
+                                        <Link to={item.path}>{item.name}</Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                    </li>
+                ))}
             </ul>
             <img src={menu_icon} alt="Menu" className="menu-icon" onClick={toggleMenu} />
         </nav>
