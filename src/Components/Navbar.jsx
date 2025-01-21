@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 import menu_icon from "../assets/menu-icon.png";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ isHome }) => {
     const [sticky, setSticky] = useState(false);
     const [mobileMenu, setMobileMenu] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -26,8 +26,14 @@ const Navbar = () => {
         setDropdownOpen(!dropdownOpen);
     };
 
+    const navClass = isHome
+        ? sticky
+            ? "dark-nav"
+            : "transparent-nav"
+        : "dark-nav";
+
     return (
-        <nav className={`container ${sticky ? "dark-nav" : "transparent-nav"}`}>
+        <nav className={`container ${navClass}`}>
             <Link to="/">
                 <img src={logo} alt="Logo" className="logo" />
             </Link>
@@ -77,7 +83,7 @@ const Navbar = () => {
                     <Link to="/success-stories">Success Stories</Link>
                 </li>
                 <li>
-                    <Link to="/contact" className="btn">
+                    <Link to="/contact-us" className="btn">
                         Contact us
                     </Link>
                 </li>

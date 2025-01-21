@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Home from "./pages/home/Home";
@@ -12,9 +12,12 @@ import Products from "./pages/products/Products";
 import "./styles/index.css";
 
 const App = () => {
+    const location = useLocation();
+    const isHome = location.pathname === "/";
+
     return (
-        <Router>
-            <Navbar />
+        <>
+            <Navbar isHome={isHome} />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
@@ -25,8 +28,14 @@ const App = () => {
                 <Route path="/contact-us" element={<ContactUs />} />
             </Routes>
             <Footer />
-        </Router>
+        </>
     );
 };
 
-export default App;
+const RootApp = () => (
+    <Router>
+        <App />
+    </Router>
+);
+
+export default RootApp;
