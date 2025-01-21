@@ -16,9 +16,9 @@ const Home = () => {
             <Hero />
             <VideoPlayer playState={playState} setPlayState={setPlayState} />
             <div className="container">
+                <AboutSection setPlayState={setPlayState} />
                 <Title subTitle="Our PRODUCTS" title="What We Offer" />
                 <OfferingSection />
-                <AboutSection setPlayState={setPlayState} />
                 <Services />
                 <Title subTitle="" title="Our Distributership" />
                 <Testimonials />
