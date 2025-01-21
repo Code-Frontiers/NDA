@@ -3,11 +3,11 @@ import about_img from "../../assets/about.jpg";
 
 const About = () => {
     return (
-        <div className="about">
-            <div className="about-left">
-                <img src={about_img} alt="" className="about-img" />
+        <div className="about-section">
+            <div className="about-section-left">
+                <img src={about_img} alt="about-image" className="about-section-img" />
             </div>
-            <div className="about-right">
+            <div className="about-section-right">
                 <h3>ABOUT US</h3>
                 <h2>New Dispensing Automation Private Limited</h2>
                 <p>
