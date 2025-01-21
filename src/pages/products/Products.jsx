@@ -1,6 +1,5 @@
 import React from "react";
 import ProductCard from "../../Components/products/ProductCard";
-import "./Products.css";
 
 import gallery_1 from "../../assets/gallery-1.jpg";
 import gallery_2 from "../../assets/gallery-2.jpg";
@@ -15,42 +14,49 @@ const productData = [
         id: 1,
         name: "Single Part Dispensing",
         description: "High-precision single part dispensing solutions.",
+        link: "/",
         image: gallery_1,
     },
     {
         id: 2,
         name: "Two Part Dispensing",
         description: "Efficient two-part dispensing systems for industrial needs.",
+        link: "/",
         image: gallery_2,
     },
     {
         id: 3,
         name: "Dispensing Robots",
         description: "Advanced robots for automated dispensing.",
+        link: "/",
         image: gallery_3,
     },
     {
         id: 4,
         name: "Piston Pumps",
         description: "Durable piston pumps for fluid handling.",
+        link: "/",
         image: gallery_4,
     },
     {
         id: 5,
         name: "Industrial Automations",
         description: "Innovative automation solutions for industries.",
+        link: "/",
         image: gallery_5,
     },
     {
         id: 6,
         name: "Pressurized Fluid Tanks",
         description: "Reliable pressurized tanks for fluid storage.",
+        link: "/",
         image: gallery_6,
     },
     {
         id: 7,
         name: "Pidilite Industrial Bonding",
         description: "High-strength adhesives for industrial applications.",
+        link: "/",
         image: gallery_7,
     },
 ];
