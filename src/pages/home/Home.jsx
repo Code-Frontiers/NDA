@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Hero from "./Hero";
-import About from "./About";
-import Campus from "./Campus";
+import AboutSection from "./AboutSection";
+import OfferingSection from "./OfferingSection";
 import Contact from "./Contact";
 import VideoPlayer from "../../Components/VideoPlayer/VideoPlayer";
 import Title from "../../Components/Title/Title";
@@ -17,8 +17,8 @@ const Home = () => {
             <VideoPlayer playState={playState} setPlayState={setPlayState} />
             <div className="container">
                 <Title subTitle="Our PRODUCTS" title="What We Offer" />
-                <Campus />
-                <About setPlayState={setPlayState} />
+                <OfferingSection />
+                <AboutSection setPlayState={setPlayState} />
                 <Services />
                 <Title subTitle="" title="Our Distributership" />
                 <Testimonials />

@@ -1,9 +1,9 @@
 import React from "react";
 import about_img from "../../assets/about.jpg";
 
-const About = () => {
+const AboutSection = () => {
     return (
-        <div className="about-section">
+        <section className="about-section">
             <div className="about-section-left">
                 <img src={about_img} alt="about-image" className="about-section-img" />
             </div>
@@ -28,8 +28,8 @@ const About = () => {
                     costs while respecting the quality of the products.
                 </p>
             </div>
-        </div>
+        </section>
     );
 };
 
-export default About;
+export default AboutSection;

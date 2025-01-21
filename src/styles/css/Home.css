@@ -138,27 +138,14 @@
     }
 }
 
-/* Campus */
+/* Offering Section */
 
-.campus {
+.offering-section {
     padding: 10px 20px;
     font-family: "Poppins", Arial, sans-serif;
     background-color: #f4f4f9;
     color: #333;
-    line-height: 1.6;
     text-align: center;
-}
-
-.gallery-header {
-    margin-bottom: 30px;
-}
-
-.gallery-header h2 {
-    font-size: 2.8rem;
-    color: #000f38;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-    animation: fadeInDown 1s ease-out;
 }
 
 .gallery {
@@ -167,7 +154,9 @@
 
 .swiper-container {
     width: 100%;
+    max-width: 1200px;
     height: 400px;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -189,18 +178,6 @@
     transition: opacity 0.3s ease;
 }
 
-.swiper-pagination-bullet {
-    background: #d9d9e3;
-    opacity: 0.7;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.swiper-pagination-bullet:hover,
-.swiper-pagination-bullet-active {
-    background: #6a59ff;
-    transform: scale(1.2);
-}
-
 .btn.dark-btn {
     color: #fff;
     border: none;
@@ -210,10 +187,10 @@
     margin-top: 20px;
     border-radius: 25px;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn.dark-btn:hover {
@@ -226,18 +203,85 @@
     width: 16px;
 }
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+@media (max-width: 768px) {
+    .swiper-container {
+        height: 300px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .btn.dark-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
     }
 }
 
-/* About */
+@media (max-width: 480px) {
+    .swiper-container {
+        height: 250px;
+    }
+
+    .btn.dark-btn {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Swiper Navigation Buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #333; /* Ensure visible arrow color */
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9); /* Light background for better visibility */
+    border-radius: 50%; /* Rounded buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: absolute;
+    top: 50%; /* Vertically center the arrows */
+    z-index: 100; /* Ensure arrows are above images */
+    transform: translateY(-50%); /* Adjust alignment */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.swiper-button-prev {
+    left: -30px; /* Adjust to ensure visibility */
+}
+
+.swiper-button-next {
+    right: -30px; /* Adjust to ensure visibility */
+}
+
+/* Hover Effect */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: #6a59ff; /* Highlight on hover */
+    color: #fff; /* Change arrow color on hover */
+    transform: translateY(-50%) scale(1.1); /* Slightly enlarge */
+}
+
+/* Ensure visibility on smaller screens */
+@media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        left: -20px;
+        right: -20px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        left: -10px;
+        right: -10px;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* About Section */
 
 .about-section {
     margin: 80px auto;
