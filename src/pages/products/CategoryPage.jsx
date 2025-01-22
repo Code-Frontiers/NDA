@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import productData from "../../data/productData.json";
-import ProductCard from "../../Components/products/ProductCard";
+import ProductCard from "../../components/products/ProductCard";
 
 const CategoryPage = () => {
     const location = useLocation();
