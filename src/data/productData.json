@@ -5,6 +5,7 @@
             "name": "Single Part Dispensing",
             "description": "Explore our single part dispensing solutions.",
             "link": "/products/single-part-dispensing",
+            "image": "/assets/gallery-1.jpg",
             "subcategories": [
                 {
                     "id": "dispensers",
@@ -66,6 +67,7 @@
             "name": "Two Part Dispensing",
             "description": "Efficient solutions for industrial needs.",
             "link": "/products/two-part-dispensing",
+            "image": "/assets/gallery-1.jpg",
             "subcategories": [
                 {
                     "id": "handheld-applicators",

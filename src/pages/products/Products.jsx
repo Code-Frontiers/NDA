@@ -10,7 +10,7 @@ const Products = () => {
                 <p>Explore our wide range of high-quality industrial solutions.</p>
             </header>
             <section className="products-grid">
-                {productsData.map((product, index) => (
+                {productsData["products"].map((product, index) => (
                     <ProductCard key={product.id} index={index} product={product} />
                 ))}
             </section>
