@@ -6,17 +6,17 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 import { EffectCoverflow, Navigation, Autoplay } from "swiper/modules";
 
-import gallery_1 from "../../assets/gallery-1.jpg";
-import gallery_2 from "../../assets/gallery-2.jpg";
-import gallery_3 from "../../assets/gallery-3.jpg";
-import gallery_4 from "../../assets/gallery-4.jpg";
-import gallery_5 from "../../assets/gallery-5.jpg";
-import gallery_6 from "../../assets/gallery-6.jpg";
-import gallery_7 from "../../assets/gallery-7.jpeg";
-import gallery_8 from "../../assets/gallery-8.png";
-import gallery_9 from "../../assets/gallery-9.jpg";
+import gallery_1 from "/assets/gallery-1.jpg";
+import gallery_2 from "/assets/gallery-2.jpg";
+import gallery_3 from "/assets/gallery-3.jpg";
+import gallery_4 from "/assets/gallery-4.jpg";
+import gallery_5 from "/assets/gallery-5.jpg";
+import gallery_6 from "/assets/gallery-6.jpg";
+import gallery_7 from "/assets/gallery-7.jpeg";
+import gallery_8 from "/assets/gallery-8.png";
+import gallery_9 from "/assets/gallery-9.jpg";
 
-import white_arrow from "../../assets/white-arrow.png";
+import white_arrow from "/assets/white-arrow.png";
 
 const OfferingSection = () => {
     return (

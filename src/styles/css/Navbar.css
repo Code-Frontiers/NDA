@@ -64,7 +64,7 @@ nav ul {
 .dropdown-menu {
     display: block;
     position: absolute;
-    top: 100%;
+    top: 125%;
     left: 0;
     background: #ffffff;
     border-radius: 8px;
@@ -106,7 +106,7 @@ nav ul {
 
 .dropdown-menu .dropdown-menu {
     top: 0;
-    left: 100%;
+    left: 85%;
     transform: translateX(10px);
     transition: all 0.3s ease;
     opacity: 0;

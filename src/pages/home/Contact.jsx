@@ -1,9 +1,9 @@
 import React from "react";
-import msg_icon from "../../assets/msg-icon.png";
-import mail_icon from "../../assets/mail-icon.png";
-import phone_icon from "../../assets/phone-icon.png";
-import location_icon from "../../assets/location-icon.png";
-import white_arrow from "../../assets/white-arrow.png";
+import msg_icon from "/assets/msg-icon.png";
+import mail_icon from "/assets/mail-icon.png";
+import phone_icon from "/assets/phone-icon.png";
+import location_icon from "/assets/location-icon.png";
+import white_arrow from "/assets/white-arrow.png";
 
 const Contact = () => {
     const [result, setResult] = React.useState("");

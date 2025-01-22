@@ -1,19 +1,7 @@
 import React from "react";
-import ProductCard from "../../../Components/products/ProductCard";
+import ProductCard from "./ProductCard";
 
-import gallery_1 from "../../../assets/gallery-1.jpg";
-
-const productData = [
-    {
-        id: 1,
-        name: "Single Part Dispensing",
-        description: "High-precision single part dispensing solutions.",
-        link: "/",
-        image: gallery_1,
-    },
-];
-
-const SinglePartDispensing = () => {
+const ProductType = ({ productData }) => {
     return (
         <main className="products-page">
             <header className="products-header">
@@ -29,4 +17,4 @@ const SinglePartDispensing = () => {
     );
 };
 
-export default SinglePartDispensing;
+export default ProductType;

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/logo.png";
-import menu_icon from "../assets/menu-icon.png";
+import logo from "/assets/logo.png";
+import menu_icon from "/assets/menu-icon.png";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ isHome }) => {
@@ -51,16 +51,36 @@ const Navbar = ({ isHome }) => {
                     path: "/products/single-part-dispensing",
                     dropdownItems: [
                         {
-                            name: "Mixer Services",
-                            path: "/products/single-part-dispensing/mixer",
+                            name: "Dispensers",
+                            path: "/products/single-part-dispensing/dispensers",
                         },
                         {
-                            name: "Toaster Services",
-                            path: "/products/single-part-dispensing/toaster",
+                            name: "Dispensing Valve Controller",
+                            path: "/products/single-part-dispensing/dispensing-valve-controller",
                         },
+                        {
+                            name: "Dispensing Accessories",
+                            path: "/products/single-part-dispensing/dispensing-accessories"
+                        },
+                        {
+                            name: "Dispensing Valves",
+                            path: "/products/single-part-dispensing/dispensing-valves"
+                        }
                     ],
                 },
-                { name: "Two Part Dispensing", path: "/products/two-part-dispensing" },
+                {
+                    name: "Two Part Dispensing", path: "/products/two-part-dispensing", isDropDown: true,
+                    dropdownItems: [
+                        {
+                            name: "Handheld Applicators",
+                            path: "/products/two-part-dispensing/handheld-applicators"
+                        },
+                        {
+                            name: "Full Loaded MMD Machine",
+                            path: "/products/two-part-dispensing/full-loaded-mmd-machine"
+                        }
+                    ]
+                },
                 { name: "Dispensing Robots", path: "/products/dispensing-robots" },
                 { name: "Piston Pumps", path: "/products/piston-pumps" },
                 { name: "Industrial Automations", path: "/products/industrial-automations" },

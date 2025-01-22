@@ -1,5 +1,5 @@
 import React from "react";
-import dark_arrow from "../../assets/dark-arrow.png";
+import dark_arrow from "/assets/dark-arrow.png";
 
 const Hero = () => {
     return (

@@ -9,7 +9,8 @@ import ContactUs from "./pages/ContactUs";
 import Gallery from "./pages/Gallery";
 import Subsidiary from "./pages/Subsidiary";
 import Products from "./pages/products/Products";
-import SinglePartDispensing from "./pages/products/single_part_dispensing/SinglePartDispensing";
+import CategoryPage from "./pages/products/CategoryPage";
+
 import "./styles/index.css";
 
 const App = () => {
@@ -22,8 +23,10 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+
                 <Route path="/products" element={<Products />} />
-                <Route path="/products/single-part-dispensing" element={<SinglePartDispensing />} />
+                <Route path="/products/*" element={<CategoryPage />} />
+
                 <Route path="/success-stories" element={<SuccessStory />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/subsidiary" element={<Subsidiary />} />

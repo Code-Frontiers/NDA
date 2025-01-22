@@ -1,5 +1,5 @@
 import React from "react";
-import about_img from "../../assets/about.jpg";
+import about_img from "/assets/about.jpg";
 
 const AboutSection = () => {
     return (

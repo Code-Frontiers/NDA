@@ -1,0 +1,71 @@
+{
+    "products": [
+        {
+            "id": "single-part-dispensing",
+            "name": "Single Part Dispensing",
+            "description": "Explore our single part dispensing solutions.",
+            "link": "/products/single-part-dispensing",
+            "subcategories": [
+                {
+                    "id": "dispensers",
+                    "name": "Dispensers",
+                    "description": "High-precision single part dispensing solutions.",
+                    "link": "/products/single-part-dispensing/dispensers",
+                    "image": "/assets/gallery-1.jpg"
+                },
+                {
+                    "id": "dispensing-valve-controller",
+                    "name": "Dispensing Valve Controller",
+                    "description": "Advanced control for single part dispensing.",
+                    "link": "/products/single-part-dispensing/dispensing-valve-controller",
+                    "image": "/assets/gallery-2.jpg"
+                },
+                {
+                    "id": "dispensing-accessories",
+                    "name": "Dispensing Accessories",
+                    "description": "Enhance your dispensing experience.",
+                    "link": "/products/single-part-dispensing/dispensing-accessories",
+                    "image": "/assets/gallery-3.jpg",
+                    "subcategories": [
+                        {
+                            "id": "adapters",
+                            "name": "Adapters",
+                            "description": "Wide range of adapters for your needs.",
+                            "link": "/products/single-part-dispensing/dispensing-accessories/adapters",
+                            "image": "/assets/gallery-4.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": "dispensing-valves",
+                    "name": "Dispensing Valves",
+                    "description": "High-precision single part dispensing solutions.",
+                    "link": "/products/single-part-dispensing/dispensing-valves",
+                    "image": "/assets/gallery-5.jpg"
+                }
+            ]
+        },
+        {
+            "id": "two-part-dispensing",
+            "name": "Two Part Dispensing",
+            "description": "Efficient solutions for industrial needs.",
+            "link": "/products/two-part-dispensing",
+            "subcategories": [
+                {
+                    "id": "handheld-applicators",
+                    "name": "Handheld Applicators",
+                    "description": "Portable and precise dispensing tools.",
+                    "link": "/products/two-part-dispensing/handheld-applicators",
+                    "image": "/assets/gallery-6.jpg"
+                },
+                {
+                    "id": "full-loaded-mmd-machine",
+                    "name": "Full Loaded MMD Machine",
+                    "description": "Advanced two-part dispensing systems.",
+                    "link": "/products/two-part-dispensing/full-loaded-mmd-machine",
+                    "image": "/assets/gallery-7.jpg"
+                }
+            ]
+        }
+    ]
+}
