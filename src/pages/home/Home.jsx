@@ -7,7 +7,7 @@ import VideoPlayer from "../../Components/VideoPlayer/VideoPlayer"
 import Title from "../../Components/Title/Title"
 import Services from "./Services"
 import Testimonials from "./Testimonials"
-import PortfolioSection from "../../Components/PortfolioSection/PortfolioSection"
+import PortfolioSection from "./PortfolioSection"
 const Home = () => {
   const [playState, setPlayState] = useState(false)
 

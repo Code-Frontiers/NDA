@@ -23,7 +23,8 @@
     color: #555;
 }
 
-/* Slider */
+/* Slider Section */
+
 .slider-section {
     margin: 20px 0;
     padding: 20px;
@@ -92,7 +93,7 @@
     margin: 10px 0;
 }
 
-/* Hero */
+/* Hero Section */
 
 .hero {
     width: 100%;
@@ -225,10 +226,9 @@
     }
 }
 
-/* Swiper Navigation Buttons */
 .swiper-button-prev,
 .swiper-button-next {
-    color: #333; /* Ensure visible arrow color */
+    color: #333;
     width: 40px;
     height: 40px;
     background: rgba(255, 255, 255, 0.9); /* Light background for better visibility */
@@ -245,14 +245,13 @@
 }
 
 .swiper-button-prev {
-    left: -30px; /* Adjust to ensure visibility */
+    left: -30px;
 }
 
 .swiper-button-next {
-    right: -30px; /* Adjust to ensure visibility */
+    right: -30px;
 }
 
-/* Hover Effect */
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
     background: #6a59ff; /* Highlight on hover */
@@ -347,7 +346,7 @@
     }
 }
 
-/* Testimonials */
+/* Testimonials Section */
 
 .testimonials {
     margin: 80px auto;
@@ -441,7 +440,7 @@
     }
 }
 
-/* Service */
+/* Service Section */
 
 .service-section {
     padding: 3rem 1rem;
@@ -510,7 +509,89 @@
     }
 }
 
-/* Contact */
+/* Portfolio Section */
+
+.work-data-section {
+    background: linear-gradient(120deg, #f7f7f7 0%, #eaeaea 100%);
+    padding: 4rem 2rem;
+    border-radius: 8px;
+    color: #333;
+    text-align: center;
+}
+
+.grid-four-col {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.counter-item {
+    background: #ffffff;
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.counter-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.counter-numbers {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #555;
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    animation: fade-in 1s ease-in-out;
+}
+
+.counter-item p {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .grid-four-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counter-numbers {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-four-col {
+        grid-template-columns: 1fr;
+    }
+
+    .counter-numbers {
+        font-size: 1.8rem;
+    }
+
+    .counter-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Section */
 
 .contact {
     margin: 80px auto;
