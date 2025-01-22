@@ -43,7 +43,7 @@ const CategoryPage = () => {
             <section className="products-grid">
                 {/* Map through the subcategories if available */}
                 {(categoryData.subcategories || []).map((product, index) => (
-                    <ProductCard key={index} product={product} />
+                    <ProductCard key={product.id} index={index} product={product} />
                 ))}
             </section>
         </main>

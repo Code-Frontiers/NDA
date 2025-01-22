@@ -11,7 +11,7 @@ const Products = () => {
             </header>
             <section className="products-grid">
                 {productsData.map((product, index) => (
-                    <ProductCard key={index} index={index} product={product} />
+                    <ProductCard key={product.id} index={index} product={product} />
                 ))}
             </section>
         </main>
