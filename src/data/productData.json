@@ -11,7 +11,23 @@
                     "name": "Dispensers",
                     "description": "High-precision single part dispensing solutions.",
                     "link": "/products/single-part-dispensing/dispensers",
-                    "image": "/assets/gallery-1.jpg"
+                    "image": "/assets/gallery-1.jpg",
+                    "subcategories": [
+                        {
+                            "id": "standard-dispensers",
+                            "name": "Standard Dispensers",
+                            "description": "Nothing",
+                            "link": "/products/single-part-dispensing/dispensers/standard-dispensers",
+                            "image": "/assets/gallery-1.jpg"
+                        },
+                        {
+                            "id": "peristaltic-pump-dispenser",
+                            "name": "Peristaltic Pump Dispenser",
+                            "description": "Nothing",
+                            "link": "/products/single-part-dispensing/dispensers/peristaltic-pump-dispenser",
+                            "image": "/assets/gallery-1.jpg"
+                        }
+                    ]
                 },
                 {
                     "id": "dispensing-valve-controller",
