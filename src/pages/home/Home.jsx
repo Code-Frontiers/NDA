@@ -7,6 +7,7 @@ import VideoPlayer from "./VideoPlayer"
 import Title from "../../components/title/Title"
 import Services from "./Services"
 import Testimonials from "./Testimonials"
+import Distributorship from "./Distributorship"
 import PortfolioSection from "./PortfolioSection"
 const Home = () => {
   const [playState, setPlayState] = useState(false)
@@ -22,6 +23,7 @@ const Home = () => {
         <Services />
         <Title subTitle="" title="Our Distributership" />
         <Testimonials />
+        <Distributorship />
         <PortfolioSection />
         <Title subTitle="Contact Us" title="Get in Touch" />
         <Contact />
