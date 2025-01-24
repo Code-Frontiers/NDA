@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import dark_arrow from "/assets/dark-arrow.png";
 
 const Hero = () => {
@@ -10,9 +11,9 @@ const Hero = () => {
                     Our cutting-edge dispensing solutions empower industries with efficiency,
                     reliability, and unmatched quality
                 </p>
-                <button className="btn">
+                <Link to="/products" className="btn">
                     Explore more <img src={dark_arrow} alt="" />
-                </button>
+                </Link>
             </div>
         </div>
     );

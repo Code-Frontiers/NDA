@@ -16,11 +16,13 @@ nav {
     background: transparent;
     box-shadow: none;
     color: white;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .dark-nav {
     background: #212ea0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
 }
 
 .logo {
@@ -92,12 +94,13 @@ nav ul {
     color: #333;
     padding: 10px 15px;
     display: block;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-menu li a:hover {
     background: #212ea0;
     color: white;
+    text-decoration: none;
 }
 
 .dropdown-menu .dropdown {
