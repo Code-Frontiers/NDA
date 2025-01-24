@@ -30,7 +30,7 @@ const Distributorship = () => {
         prevArrow: <CustomArrow direction="left" />,
         responsive: [
             {
-                breakpoint: 768, // For mobile devices
+                breakpoint: 600, // For mobile devices
                 settings: {
                     slidesToShow: 1, // Show 1 slide on mobile
                 },
@@ -66,7 +66,7 @@ const Distributorship = () => {
     ];
 
     return (
-        <div className="testimonials">
+        <div className="distributorship-section">
             <div className="carousel-container">
                 <Slider {...settings}>
                     {carouselItems.map((carouselItem) => (
@@ -75,9 +75,7 @@ const Distributorship = () => {
                                 <div className="user-info">
                                     <img src={carouselItem.img} alt="" />
                                     <div>
-                                        <h3>
-                                            {carouselItem.name}
-                                        </h3>
+                                        <h3>{carouselItem.name}</h3>
                                         <span>{carouselItem.company}</span>
                                     </div>
                                 </div>
