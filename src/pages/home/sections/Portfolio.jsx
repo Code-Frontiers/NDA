@@ -33,16 +33,18 @@ const Portfolio = () => {
     }, []);
 
     return (
-        <section className="work-data-section" ref={sectionRef}>
-            <div className="portfolio-container grid grid-four-col">
-                {counters.map((counter) => (
-                    <Counter
-                        key={counter.id}
-                        target={counter.target}
-                        label={counter.label}
-                        isVisible={isVisible}
-                    />
-                ))}
+        <section className="container">
+            <div className="work-data-section" ref={sectionRef}>
+                <div className="portfolio-container grid grid-four-col">
+                    {counters.map((counter) => (
+                        <Counter
+                            key={counter.id}
+                            target={counter.target}
+                            label={counter.label}
+                            isVisible={isVisible}
+                        />
+                    ))}
+                </div>
             </div>
         </section>
     );

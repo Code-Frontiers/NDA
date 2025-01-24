@@ -191,8 +191,6 @@
     }
 }
 
-/* Responsive Design */
-
 @media screen and (max-width: 999px) {
     .list .item .content {
         left: 50px;

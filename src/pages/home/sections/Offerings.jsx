@@ -60,32 +60,35 @@ const Offerings = () => {
     }, [items]);
 
     return (
-        <section className="offering-section">
-            <div className="carousal">
-                <div className={`list ${animation}`}>
-                    {items.map((item, index) => (
-                        <div
-                            key={index}
-                            className="item"
-                            style={{ backgroundImage: `url(${item.image})` }}
-                        >
-                            <div className="content">
-                                <div className="name">{item.name}</div>
-                                <div className="content-description">{item.description}</div>
-                                <div className="content-button">
-                                    <Link to={item.link}>See More</Link>
+        <section className="container">
+
+            <div className="offerings-section">
+                <div className="carousal">
+                    <div className={`list ${animation}`}>
+                        {items.map((item, index) => (
+                            <div
+                                key={index}
+                                className="item"
+                                style={{ backgroundImage: `url(${item.image})` }}
+                            >
+                                <div className="content">
+                                    <div className="name">{item.name}</div>
+                                    <div className="content-description">{item.description}</div>
+                                    <div className="content-button">
+                                        <Link to={item.link}>See More</Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
 
-                <div className="arrows">
-                    <button className="prev" onClick={() => showSlider("prev")}>{"<"}</button>
-                    <button className="next" onClick={() => showSlider("next")}>{">"}</button>
-                </div>
+                    <div className="arrows">
+                        <button className="prev" onClick={() => showSlider("prev")}>{"<"}</button>
+                        <button className="next" onClick={() => showSlider("next")}>{">"}</button>
+                    </div>
 
-                <div className="timeRunning" ref={runningTimeRef}></div>
+                    <div className="timeRunning" ref={runningTimeRef}></div>
+                </div>
             </div>
         </section>
 

@@ -14,19 +14,18 @@ const Home = () => {
         <>
             <Hero />
             <VideoPlayer />
-            <div className="container">
-                <Title title="About Us" />
-                <About />
-                <Title title="What We Offer" />
-                <Offerings />
-                <Title title="Services Offered" />
-                <Services />
-                <Title title="Our Distributorship" />
-                <Distributorship />
-                <Portfolio />
-                <Title title="Get in Touch" />
-                <Contact />
-            </div>
+            <Title title="About Us" />
+            <About />
+            <Title title="What We Offer" />
+            <Offerings />
+            <Title title="Services Offered" />
+            <Services />
+            <Title title="Our Distributorship" />
+            <Distributorship />
+            <Title title="Milestones Achieved" />
+            <Portfolio />
+            <Title title="Get in Touch" />
+            <Contact />
         </>
     );
 };

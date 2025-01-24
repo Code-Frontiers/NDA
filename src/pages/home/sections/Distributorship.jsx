@@ -24,15 +24,21 @@ const Distributorship = () => {
         autoplay: true, // Enable automatic sliding
         autoplaySpeed: 3000, // Time in ms for each slide
         speed: 500,
-        slidesToShow: 2, // Show 2 slides by default
+        slidesToShow: 3,
         slidesToScroll: 1,
         nextArrow: <CustomArrow direction="right" />,
         prevArrow: <CustomArrow direction="left" />,
         responsive: [
             {
-                breakpoint: 600, // For mobile devices
+                breakpoint: 1200,
                 settings: {
-                    slidesToShow: 1, // Show 1 slide on mobile
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
                 },
             },
         ],
@@ -66,25 +72,27 @@ const Distributorship = () => {
     ];
 
     return (
-        <div className="distributorship-section">
-            <div className="carousel-container">
-                <Slider {...settings}>
-                    {carouselItems.map((carouselItem) => (
-                        <div className="carousel-item-container">
-                            <div className="carousel-item">
-                                <div className="user-info">
-                                    <img src={carouselItem.img} alt="" />
-                                    <div>
-                                        <h3>{carouselItem.name}</h3>
-                                        <span>{carouselItem.company}</span>
+        <section className="container">
+            <div className="distributorship-section">
+                <div className="carousel-container">
+                    <Slider {...settings}>
+                        {carouselItems.map((carouselItem) => (
+                            <div className="carousel-item-container">
+                                <div className="carousel-item">
+                                    <div className="user-info">
+                                        <img src={carouselItem.img} alt="" />
+                                        <div>
+                                            <h3>{carouselItem.name}</h3>
+                                            <span>{carouselItem.company}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
-                </Slider>
+                        ))}
+                    </Slider>
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 

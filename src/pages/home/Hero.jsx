@@ -3,7 +3,7 @@ import dark_arrow from "/assets/dark-arrow.png";
 
 const Hero = () => {
     return (
-        <div className="hero container">
+        <div className="hero">
             <div className="hero-text">
                 <h1>We deliver innovative dispensing solutions for a better tomorrow</h1>
                 <p>

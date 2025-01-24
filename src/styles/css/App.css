@@ -24,9 +24,7 @@ li {
 }
 
 .container {
-    padding-left: 10%;
-    padding-right: 10%;
-    margin: 0 auto;
+    padding: 0 max(50px, 6%);
 }
 
 .btn {

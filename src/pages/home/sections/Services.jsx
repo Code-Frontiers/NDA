@@ -41,19 +41,21 @@ const services = [
 
 const Services = () => {
     return (
-        <section className="service-section">
-            <p className="section-description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem ex dolores
-                tempore possimus, mollitia vero quas.
-            </p>
-            <div className="service-grid">
-                {services.map((service, index) => (
-                    <div key={index} className="service-box">
-                        <ion-icon className="service-icon" name={service.icon}></ion-icon>
-                        <h3 className="service-title">{service.title}</h3>
-                        <p className="service-description">{service.description}</p>
-                    </div>
-                ))}
+        <section className="container">
+            <div className="services-section">
+                <p className="services-description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem ex dolores
+                    tempore possimus, mollitia vero quas.
+                </p>
+                <div className="service-grid">
+                    {services.map((service, index) => (
+                        <div key={index} className="service-box">
+                            <ion-icon className="service-icon" name={service.icon}></ion-icon>
+                            <h3 className="service-title">{service.title}</h3>
+                            <p className="service-description">{service.description}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );
