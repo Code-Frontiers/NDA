@@ -93,7 +93,7 @@
 
 .carousal .content-description {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 18px;
     margin-left: 5px;
     color: #212ea0;
@@ -108,26 +108,27 @@
     animation: animate 1s ease-in-out 1.2s 1 forwards;
 }
 
-.carousal .content-button button {
+.carousal .content-button a {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     font-size: 16px;
     border: 2px solid #fff;
+    background-color: #bfbfbf;
 }
 
-.carousal .content-button button:nth-child(1) {
+.carousal .content-button a:nth-child(1) {
     margin-right: 15px;
 }
 
-.carousal .content-button button:nth-child(2) {
+.carousal .content-button a:nth-child(2) {
     background: transparent;
     color: #212ea0;
     border: 2px solid #fff;
     transition: 0.3s;
 }
 
-.carousal .content-button button:nth-child(2):hover {
+.carousal .content-button a:nth-child(2):hover {
     background-color: #212ea0;
     color: #fff;
     border-color: #212ea0;
@@ -226,7 +227,7 @@
         font-size: 45px;
     }
 
-    .carousal .content-button button {
+    .carousal .content-button a {
         padding: 10px 15px;
         font-size: 14px;
     }
