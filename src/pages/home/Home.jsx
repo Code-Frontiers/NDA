@@ -16,13 +16,14 @@ const Home = () => {
             <VideoPlayer />
             <div className="container">
                 <About />
-                <Title subTitle="Our Products" title="What We Offer" />
+                <Title title="What We Offer" />
                 <Offerings />
+                <Title title="Services Offered" />
                 <Services />
-                <Title subTitle="" title="Our Distributorship" />
+                <Title title="Our Distributorship" />
                 <Distributorship />
                 <Portfolio />
-                <Title subTitle="Contact Us" title="Get in Touch" />
+                <Title title="Get in Touch" />
                 <Contact />
             </div>
         </>

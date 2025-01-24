@@ -42,7 +42,6 @@ const services = [
 const Services = () => {
     return (
         <section className="service-section">
-            <h2 className="common-heading">Service Offers</h2>
             <p className="section-description">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem ex dolores
                 tempore possimus, mollitia vero quas.
