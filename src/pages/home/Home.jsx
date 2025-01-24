@@ -1,28 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import Hero from "./Hero";
-import AboutSection from "./AboutSection";
-import OfferingSection from "./OfferingSection";
-import Contact from "./Contact";
+import About from "./sections/About";
+import Offerings from "./sections/Offerings";
+import Contact from "./sections/Contact";
 import VideoPlayer from "./VideoPlayer";
 import Title from "../../components/title/Title";
-import Services from "./Services";
-import Distributorship from "./Distributorship";
-import PortfolioSection from "./PortfolioSection";
+import Services from "./sections/Services";
+import Distributorship from "./sections/Distributorship";
+import Portfolio from "./sections/Portfolio";
 const Home = () => {
-    const [playState, setPlayState] = useState(false);
 
     return (
         <>
             <Hero />
-            <VideoPlayer playState={playState} setPlayState={setPlayState} />
+            <VideoPlayer />
             <div className="container">
-                <AboutSection setPlayState={setPlayState} />
+                <About />
                 <Title subTitle="Our Products" title="What We Offer" />
-                <OfferingSection />
+                <Offerings />
                 <Services />
                 <Title subTitle="" title="Our Distributorship" />
                 <Distributorship />
-                <PortfolioSection />
+                <Portfolio />
                 <Title subTitle="Contact Us" title="Get in Touch" />
                 <Contact />
             </div>

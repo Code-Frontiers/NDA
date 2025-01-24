@@ -18,7 +18,7 @@ import gallery_9 from "/assets/gallery-9.jpg";
 
 import white_arrow from "/assets/white-arrow.png";
 
-const OfferingSection = () => {
+const Offerings = () => {
     return (
         <section className="offering-section">
             <div className="gallery">
@@ -65,4 +65,4 @@ const OfferingSection = () => {
     );
 };
 
-export default OfferingSection;
+export default Offerings;
