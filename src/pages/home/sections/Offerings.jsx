@@ -5,7 +5,7 @@ const Offerings = () => {
     const [items, setItems] = useState([
         { id: 1, image: "assets/gallery-1.jpg", name: "Single Part Dispensing", link: "/", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae." },
         { id: 2, image: "assets/gallery-2.jpg", name: "Two Part Dispensing", link: "/", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae." },
-        { id: 3, image: "assets/gallery-3.jpg", name: "Dispensing Robotos", link: "/", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae." },
+        { id: 3, image: "assets/gallery-3.jpg", name: "Dispensing Robots", link: "/", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae." },
         { id: 4, image: "assets/gallery-4.jpg", name: "Piston Pumps", link: "/", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae." },
         { id: 5, image: "assets/gallery-5.jpg", name: "Industrial Automation", link: "/", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae." },
         { id: 6, image: "assets/gallery-6.jpg", name: "Pressurized Fuild Tanks", link: "/", description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae." },
