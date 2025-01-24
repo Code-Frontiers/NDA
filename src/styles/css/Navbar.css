@@ -43,7 +43,7 @@ nav ul {
 }
 
 .nav-links a:hover {
-    color: #212ea0;
+    text-decoration: underline;
 }
 
 .hamburger-icon {
