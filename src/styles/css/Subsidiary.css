@@ -24,7 +24,7 @@
 
 .about-subsidiary h2 {
     font-size: 2.5rem;
-    color: #ff7b42;
+    color: var(--primary-blue);
     margin-bottom: 1rem;
 }
 
@@ -43,7 +43,7 @@
 
 .achievements h2 {
     font-size: 2.5rem;
-    color: #ff7b42;
+    color: var(--primary-blue);
     margin-bottom: 2rem;
 }
 
@@ -63,7 +63,7 @@
 
 .achievement h3 {
     font-size: 1.5rem;
-    color: #ff7b42;
+    color: var(--primary-blue);
 }
 
 .achievement p {
@@ -90,7 +90,7 @@
 }
 
 .cta-button {
-    background: #ff7b42;
+    background: var(--primary-blue);
     color: white;
     padding: 0.8rem 2rem;
     border: none;
@@ -101,7 +101,7 @@
 }
 
 .cta-button:hover {
-    background: #ff9966;
+    background: var(--primary-blue);
 }
 
 /* Responsive Design */
