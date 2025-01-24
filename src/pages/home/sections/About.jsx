@@ -8,7 +8,6 @@ const AboutSection = () => {
                 <img src={about_img} alt="about-image" className="about-section-img" />
             </div>
             <div className="about-section-right">
-                <h3>ABOUT US</h3>
                 <h2>New Dispensing Automation Private Limited</h2>
                 <p>
                     Started on November 2020 based in New Delhi, India. Having a vast experience in

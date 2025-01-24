@@ -15,6 +15,7 @@ const Home = () => {
             <Hero />
             <VideoPlayer />
             <div className="container">
+                <Title title="About Us" />
                 <About />
                 <Title title="What We Offer" />
                 <Offerings />

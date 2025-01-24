@@ -341,10 +341,9 @@
 }
 
 .about-section h2 {
-    font-size: 35px;
-    color: #000f38;
+    font-size: 30px;
+    color: #212ea0;
     margin: 10px 0;
-    max-width: 400px;
 }
 
 .about-section p {
